@@ -12,7 +12,7 @@
         public DateTime PublishedDate { get; set; }
         public string Author { get; set; }
         public bool Visible { get; set; }
-        public Tag Tags { get; set; }
+        public ICollection<Tag> Tags { get; set; }
 
         public BlogPost(Guid id, string heading, string pageTitle, string shortDescription, string featuredImageUrl, string urlHandle,
                         DateTime publishedDate, string author, bool visible, Tag tags)
@@ -24,7 +24,6 @@
             FeaturedImageUrl = featuredImageUrl;
             UrlHandle = urlHandle;
             PublishedDate = publishedDate;
-            Author = author;
         }
     }
 }
